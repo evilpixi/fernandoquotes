@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Fernando Quotes</title>
+</head>
+<body>
+    <img src="fernando.png" alt="">
+    <div id="quoteZone"> hola soy fernando</div>
+    <div id="inputZone">
+        <input type="text" id="textBox" placeholder="write here">
+        <button id="generateButton" onclick="generateQuote()">Generate quote</button>
+    </div>
+
+    <script>
+        function generateQuote()
+        {
+            quoteZone.innerHTML = textBox.value
+            textBox.value = ""
+        }
+
+        textBox.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) 
+            {
+                generateQuote()
+            }
+        })
+    </script>
+</body>
+</html>
